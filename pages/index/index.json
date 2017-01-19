@@ -1,0 +1,20 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/admin/admin"
+    ],
+    "tabBar": {
+        "color": "#dddddd",
+        "list": [
+            {
+                "pagePath": "pages/index/index",
+                "text": "首页"
+            },
+            {
+                "pagePath": "pages/admin/admin",
+                "text": "日志"
+            }
+        ]
+    },
+    "navigationBarTitleText": "index"
+}

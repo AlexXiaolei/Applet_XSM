@@ -1,0 +1,11 @@
+{
+    "pages": [
+        "pages/admin/admin"
+    ],
+    "navigationBarTitleText": "admin",
+    "window": {
+        "navigationBarTitleText": "TabBar",
+        "navigationBarBackgroundColor": "#F60",
+        "navigationBarTextStyle": "white"
+    }
+}
