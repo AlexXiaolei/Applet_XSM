@@ -1,0 +1,6 @@
+{
+    "pages": [
+        "pages/store/store"
+    ],
+    "navigationBarTitleText": "门店查询"
+}

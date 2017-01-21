@@ -1,0 +1,10 @@
+.store_info{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 100rpx;
+}
+
+.store_info text{
+    margin: 20rpx;
+}

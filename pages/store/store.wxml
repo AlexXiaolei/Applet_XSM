@@ -1,0 +1,12 @@
+<view>
+  <view class="store_info">
+    <text>店名：馨善美美容养生连锁1</text>
+    <text>地址：福建省福州市晋安区</text>
+    <text>电话：0591-88888888</text>
+  </view>
+  <view class="store_info">
+    <text>店名：馨善美美容养生连锁2</text>
+    <text>地址：福建省福州市晋安区</text>
+    <text>电话：0591-88888888</text>
+  </view>
+</view>

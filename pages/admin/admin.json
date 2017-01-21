@@ -2,7 +2,7 @@
     "pages": [
         "pages/admin/admin"
     ],
-    "navigationBarTitleText": "admin",
+    "navigationBarTitleText": "管理模式",
     "window": {
         "navigationBarTitleText": "TabBar",
         "navigationBarBackgroundColor": "#F60",

@@ -1,20 +1,6 @@
 {
     "pages": [
-        "pages/index/index",
-        "pages/admin/admin"
+        "pages/index/index"
     ],
-    "tabBar": {
-        "color": "#dddddd",
-        "list": [
-            {
-                "pagePath": "pages/index/index",
-                "text": "首页"
-            },
-            {
-                "pagePath": "pages/admin/admin",
-                "text": "日志"
-            }
-        ]
-    },
-    "navigationBarTitleText": "index"
+    "navigationBarTitleText": "会籍查询"
 }

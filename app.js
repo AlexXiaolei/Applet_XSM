@@ -9,7 +9,7 @@ App({
   getUserInfo: function (cb) {
     var that = this
 
-    var userInfo = wx.getStorageSync("UserInfo")
+    var userInfo = wx.getStorage("UserInfo")
     if (!userInfo) {
       //调用登录接口
       wx.login({
@@ -23,11 +23,9 @@ App({
                   duration: 10000
                 })
 
-                typeof cb == "function" && cb(that.globalData.userInfo)
-
                 //请求用户报道接口
                 wx.request({
-                  url: 'http://localhost:5454/api/XSM/UserReport',
+                  url: 'https://api.fjhankun.com/api/XSM/UserReport',
                   data: {
                     signature: res["signature"],
                     raw_data: res["rawData"],
@@ -53,6 +51,8 @@ App({
                     }, 2000)
                   }
                 })
+that.globalData.userInfo = userInfo
+                 typeof cb == "function" && cb(that.globalData.userInfo)
               }
             })
           }
@@ -68,11 +68,12 @@ App({
         }
       })
     }
+    else{
+      that.globalData.userInfo=userInfo
+    }
 
     if (userInfo.Role == 0) {
-      //wx.switchTab({
-      //  url: '/pages/admin/admin'
-      //})
+      
     }
   },
   globalData: {
