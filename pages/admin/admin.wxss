@@ -14,3 +14,9 @@
   margin: 20rpx;
   border-radius: 50%;
 }
+
+.sorry{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

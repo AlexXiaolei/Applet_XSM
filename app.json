@@ -1,9 +1,12 @@
 {
     "pages": [
+        "pages/admin/admin_store/admin_store",
         "pages/index/index",
         "pages/admin/admin",
         "pages/store/store",
-        "pages/detail/detail"
+        "pages/detail/detail",
+        
+        "pages/admin/admin_store/detail/detail"
     ],
     "window": {
         "backgroundTextStyle": "light",

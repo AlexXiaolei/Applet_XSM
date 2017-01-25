@@ -3,7 +3,3 @@
   flex-direction: column;
   margin: 100rpx;
 }
-
-.store_info text{
-    margin: 20rpx;
-}

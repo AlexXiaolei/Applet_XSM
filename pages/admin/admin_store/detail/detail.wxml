@@ -1,0 +1,10 @@
+<view>
+  <form class="store-info" bindsubmit="formSubmit">
+    <input name="store_name" type="text" placeholder="请输入门店名称" />
+    <input name="store_name" type="text" placeholder="请输入门店地址" />
+    <input name="store_name" type="text" placeholder="请输入门店电话" />
+    <input name="store_name" type="text" placeholder="请输入门店附加信息(可不填)" />
+
+    <button form-type="submit">提交</button>
+  </form>
+</view>

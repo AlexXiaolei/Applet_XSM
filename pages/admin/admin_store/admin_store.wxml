@@ -1,0 +1,10 @@
+<view>
+  <button bindtap="bindAddStore">添加门店</button>
+  <view wx:for="{{store_list}}">
+    <view class="store_info" data-id="{{item.ID}}" bindtap="bindEditStore" >
+      <text>店名：{{item.StoreName}}</text>
+      <text>地址：福建省福州市晋安区</text>
+      <text>电话：0591-88888888</text>
+    </view>
+  </view>
+</view>

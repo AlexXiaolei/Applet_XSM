@@ -1,0 +1,10 @@
+.store-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.store-info input{
+    padding-left: 10px;
+    height: 44px;
+    margin: 20px;
+}
