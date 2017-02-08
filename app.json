@@ -1,18 +1,23 @@
 {
     "pages": [
-        "pages/admin/admin_store/admin_store",
-        "pages/index/index",
+"pages/admin/admin_user/admin_user",
+         "pages/index/index",
+        
+        "pages/admin/admin_user/detail/detail",
+       
+        "pages/index/fill/fill",
         "pages/admin/admin",
         "pages/store/store",
         "pages/detail/detail",
-        
+        "pages/admin/admin_store/admin_store",
         "pages/admin/admin_store/detail/detail"
     ],
     "window": {
         "backgroundTextStyle": "light",
         "navigationBarBackgroundColor": "#fff",
         "navigationBarTitleText": "WeChat",
-        "navigationBarTextStyle": "black"
+        "navigationBarTextStyle": "black",
+        "enablePullDownRefresh": true
     },
     "tabBar": {
         "color": "#dddddd",

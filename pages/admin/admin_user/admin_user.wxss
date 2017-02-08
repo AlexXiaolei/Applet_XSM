@@ -1,0 +1,17 @@
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-identity {
+  width: 64rpx;
+  height: 64rpx;
+}
+
+.user_info {
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+}

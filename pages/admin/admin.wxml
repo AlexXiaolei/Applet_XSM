@@ -4,7 +4,7 @@
     <text>{{userInfo.UserName==''?userInfo.NickName:userInfo.UserName}}</text>
   </view>
   <view class="admin">
-    <button>客户资料管理</button>
+    <button bindtap="bindUserManage">客户资料管理</button>
     <button>消费明细管理</button>
     <button bindtap="bindStore">门店信息管理</button>
   </view>

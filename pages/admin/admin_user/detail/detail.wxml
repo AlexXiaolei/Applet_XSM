@@ -1,0 +1,53 @@
+<view>
+  <form class="user-info" bindsubmit="formSubmit">
+    <view>
+      <text>用户ID：{{user_info.ID}}</text>
+      <input type="text" name="UserID" style="display:none;" value="{{user_info.ID}}" />
+    </view>
+    <view>
+      <text>昵称：{{user_info.NickName}}</text>
+    </view>
+    <view>
+      <text style="float:left;">真实姓名：</text>
+      <input type="text" name="UserName" placeholder="请输入客户真实姓名" value="{{user_info.UserName}}" />
+    </view>
+    <view>
+      <text style="float:left;">联系方式：</text>
+      <input type="text" name="UserTel" placeholder="请输入客户联系方式" value="{{user_info.UserTel}}" />
+    </view>
+    <view wx:if="{{user_info.Gender==1}}">
+      <text>性别：男 </text>
+    </view>
+    <view wx:elif="{{user_info.Gender==2}}">
+      <text>性别：女 </text>
+    </view>
+    <view wx:elif="{{user_info.Gender==0}}">
+      <text>性别：未知 </text>
+    </view>
+    <view>
+      <text>省份：{{user_info.Province}}</text>
+    </view>
+    <view>
+      <text>城市：{{user_info.City}}</text>
+    </view>
+    <view>
+      <text>国家：{{user_info.Country}}</text>
+    </view>
+    <view>
+      <text>首次关注时间：{{user_info.AddTime}}</text>
+    </view>
+    <view>
+      <text>最后活跃时间：{{user_info.AddTime}}</text>
+    </view>
+    <view>
+      <text style="float:left;">权限选择：</text>
+      <picker name="SelectRole" value="{{user_info.Role}}" range="{{role_list}}" range-key="name">
+        <view class="picker">
+          {{role_list[user_info.Role]["name"]}}
+        </view>
+      </picker>
+    </view>
+    <button form-type="submit">提交</button>
+    <button class="btn-delete" wx:if="{{store_info.ID>0}}" bindtap="bindDelete" data-id="{{store_info.ID}}">删除</button>
+  </form>
+</view>

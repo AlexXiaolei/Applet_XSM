@@ -1,0 +1,16 @@
+<view>
+  <form class="fill-info" bindsubmit="formSubmit">
+    <view>
+      您的姓名：
+      <input name="UserName" type="text" placeholder="请输入您的真实姓名" value="{{userInfo.UserName}}" />
+    </view>
+    <view>
+      <text>联系方式：</text>
+      <input name="UserTel" type="text" placeholder="请输入您的联系方式" value="{{userInfo.UserTel}}" />
+    </view>
+    <input name="UserID" type="text" style="display:none;" value="{{userInfo.ID}}" />
+    <view>
+      <button form-type="submit">我填写完啦</button>
+    </view>
+  </form>
+</view>

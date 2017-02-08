@@ -1,3 +1,4 @@
 {
-    "navigationBarTitleText": "管理模式-门店信息管理"
+    "navigationBarTitleText": "管理模式-门店信息管理",
+    "enablePullDownRefresh": true
 }

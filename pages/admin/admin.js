@@ -10,6 +10,12 @@ Page({
       url: '../admin/admin_store/admin_store'
     })
   },
+  //事件处理函数
+  bindUserManage: function() {
+    wx.navigateTo({
+      url: '../admin/admin_user/admin_user'
+    })
+  },
   onLoad: function () {
     var userInfo = wx.getStorageSync("UserInfo")
 

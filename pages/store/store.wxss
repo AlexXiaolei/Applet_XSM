@@ -7,3 +7,7 @@
 .store_info text{
     margin: 20rpx;
 }
+
+.tips{
+  
+}

@@ -1,3 +1,5 @@
+var config = require("config.js")
+
 //app.js
 App({
   getUserInfo: function (cb) {
@@ -19,7 +21,7 @@ App({
 
               //请求用户报道接口
               wx.request({
-                url: 'https://api.fjhankun.com/api/XSM/UserReport',
+                url: config.domain + '/api/XSM/UserReport',
                 data: {
                   signature: res["signature"],
                   raw_data: res["rawData"],

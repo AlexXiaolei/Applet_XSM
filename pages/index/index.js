@@ -4,6 +4,11 @@ Page({
     data: {
         userInfo: {}
     },
+    bindFill: function (e) {
+        wx.navigateTo({
+            url: 'fill/fill?userid=' + e.currentTarget.dataset.userid
+        })
+    },
     onLoad: function () {
         console.log('onLoad')
         var that = this

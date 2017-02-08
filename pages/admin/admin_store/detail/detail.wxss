@@ -3,8 +3,14 @@
   flex-direction: column;
 }
 
-.store-info input{
+.store-info input,textarea{
     padding-left: 10px;
     height: 44px;
     margin: 20px;
+}
+
+.btn-delete{
+  margin-top: 20px;
+  background-color: #E64340;
+  color: #fff;
 }

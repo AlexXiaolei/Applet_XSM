@@ -1,10 +1,12 @@
 <view>
   <form class="store-info" bindsubmit="formSubmit">
-    <input name="store_name" type="text" placeholder="请输入门店名称" />
-    <input name="store_name" type="text" placeholder="请输入门店地址" />
-    <input name="store_name" type="text" placeholder="请输入门店电话" />
-    <input name="store_name" type="text" placeholder="请输入门店附加信息(可不填)" />
-
+    <input name="store_name" type="text" placeholder="请输入门店名称" value="{{store_info.StoreName}}"/>
+    <textarea name="store_address" type="text" placeholder="请输入门店地址" value="{{store_info.StoreAddress}}"/>
+    <input name="store_tel" type="text" placeholder="请输入门店电话" value="{{store_info.StoreTel}}"/>
+    <input name="store_remark" type="text" placeholder="请输入门店附加信息(可不填)" value="{{store_info.Remark}}"/>
+    <input name="store_id" value="{{store_info.ID}}" style="display:none;"/>
     <button form-type="submit">提交</button>
+
+    <button class="btn-delete" wx:if="{{store_info.ID>0}}" bindtap="bindDelete" data-id="{{store_info.ID}}">删除</button>
   </form>
 </view>

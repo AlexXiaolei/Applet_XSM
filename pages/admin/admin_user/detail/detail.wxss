@@ -1,0 +1,8 @@
+.user-info view{
+    margin:20px 0 20px 20px;
+}
+
+.user-info input{
+    width:55%;
+    border:1px solid #A9BAC9;
+}

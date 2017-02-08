@@ -2,23 +2,18 @@ var config = require("../../../config.js")
 
 Page({
     data: {
-        store_list: []
+        user_list: []
     },
-    bindAddStore: function () {
-        wx.navigateTo({
-            url: 'detail/detail?optype=1'
-        })
-    },
-    bindEditStore: function (e) {
-        wx.navigateTo({
-            url: 'detail/detail?optype=2&store_id=' + e.currentTarget.dataset.id
+    bindUserManage: function (e) {
+         wx.navigateTo({
+            url: 'detail/detail?user_id=' + e.currentTarget.dataset.userid
         })
     },
     onLoad: function () {
         var that = this
 
         wx.showToast({
-            title: '查询门店中，请稍后...',
+            title: '查询客户资料中，请稍后...',
             icon: 'loading',
             duration: 10000
         })
@@ -36,23 +31,23 @@ Page({
 
 function GetData(that){
     wx.request({
-            url: config.domain + '/api/XSM/GetStore',
+            url: config.domain + '/api/XSM/GetUserList',
             data: {
             },
             method: 'POST',
             header: {
                 'content-type': 'application/x-www-form-urlencoded'
             },
-            success: function (storeInfo) {
-                if (storeInfo.data.result == "1") {
-                    var storeList = JSON.parse(storeInfo.data.data)
+            success: function (cbuserInfo) {
+                if (cbuserInfo.data.result == "1") {
+                    var userList = JSON.parse(cbuserInfo.data.data)
 
                     setTimeout(function () {
                         wx.hideToast()
                     }, 2000)
 
                     that.setData({
-                        store_list: storeList
+                        user_list: userList
                     })
                 }
             }

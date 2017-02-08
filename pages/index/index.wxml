@@ -4,8 +4,10 @@
     <text>尊敬的{{userInfo.UserName==''?userInfo.NickName:userInfo.UserName}}</text>
   </view>
   <view class="thankword">
-    <text>感谢您选择馨善美</text>
+    <text>感谢您选择馨善美。</text>
   </view>
-
-  <view class="update"><button>完善我的资料</button></view>
+  <view class="thankword">
+    <text>为了给您提供更好的服务，请完善您的个人信息。</text>
+  </view>
+  <button class="update" bindtap="bindFill">完善我的信息</button>
 </view>
