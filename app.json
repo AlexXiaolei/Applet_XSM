@@ -1,10 +1,9 @@
 {
     "pages": [
-"pages/admin/admin_user/admin_user",
-         "pages/index/index",
-        
+        "pages/admin/admin_user/consume/consume",
+        "pages/index/index",
         "pages/admin/admin_user/detail/detail",
-       
+        "pages/admin/admin_user/admin_user",
         "pages/index/fill/fill",
         "pages/admin/admin",
         "pages/store/store",

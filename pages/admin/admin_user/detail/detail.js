@@ -16,14 +16,39 @@ Page({
                 id: 2,
                 name: '超级管理员'
             }
-        ]
+        ],
+        role_index: 0,
+        role_name: ''
+    },
+    bindPickerChange: function (e) {
+        var select_index = e.detail.value
+
+        var roleName = ""
+
+        switch (select_index) {
+            case "0":
+                roleName = "普通客户"
+                break
+            case "1":
+                roleName = "管理员"
+                break
+            case "2":
+                roleName = "超级管理员"
+                break
+        }
+
+        this.setData({
+            role_index: select_index,
+            role_name: roleName
+        })
     },
     formSubmit: function (e) {
         var formData = e.detail.value
-        var userID=formData.UserID
+        var userID = formData.UserID
         var userName = formData.UserName
         var userTel = formData.UserTel
         var role = formData.SelectRole
+        var remark=formData.Remark
 
         wx.showToast({
             title: '保存信息中...',
@@ -37,7 +62,8 @@ Page({
                 user_id: userID,
                 user_name: userName,
                 user_tel: userTel,
-                role:role
+                role: role,
+                remark:remark
             },
             method: 'POST',
             header: {
@@ -84,8 +110,24 @@ Page({
                         wx.hideToast()
                     }, 2000)
 
+                    var roleName = ""
+
+                    switch (userInfo.Role) {
+                        case 0:
+                            roleName = "普通客户"
+                            break
+                        case 1:
+                            roleName = "管理员"
+                            break
+                        case 2:
+                            roleName = "超级管理员"
+                            break
+                    }
+
                     that.setData({
-                        user_info: userInfo
+                        user_info: userInfo,
+                        role_index: userInfo.Role,
+                        role_name: roleName
                     })
                 }
             }

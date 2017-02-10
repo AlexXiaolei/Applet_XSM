@@ -40,10 +40,13 @@
       <text>最后活跃时间：{{user_info.AddTime}}</text>
     </view>
     <view>
+      <textarea type="text" name="Remark" style="border:1px solid #A9BAC9;" placeholder="请输入客户备注" value="{{user_info.Remark}}" />
+    </view>
+    <view>
       <text style="float:left;">权限选择：</text>
-      <picker name="SelectRole" value="{{user_info.Role}}" range="{{role_list}}" range-key="name">
+      <picker name="SelectRole" bindchange="bindPickerChange" value="{{role_index}}" range="{{role_list}}" range-key="name">
         <view class="picker">
-          {{role_list[user_info.Role]["name"]}}
+          {{role_name}}
         </view>
       </picker>
     </view>

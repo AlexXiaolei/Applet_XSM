@@ -1,0 +1,22 @@
+.consume-main {
+  width: 100%;
+}
+
+.consume-main view {
+  float: left;
+  width: 100%;
+  margin:5px 0 5px 8px;
+}
+
+.consume-main view text {
+  float: left;
+}
+
+input,textarea {
+  border: 1px solid #a9bac9;
+  width:100%;
+}
+
+button{
+    margin-top: 50px; 
+}
