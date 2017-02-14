@@ -1,3 +1,4 @@
 {
-    "navigationBarTitleText": "管理模式-客户资料修改"
+    "navigationBarTitleText": "管理模式-客户资料修改",
+    "enablePullDownRefresh": true
 }

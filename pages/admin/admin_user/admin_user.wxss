@@ -14,4 +14,12 @@
   font-size: 14px;
   display: flex;
   align-items: center;
+  height: 100%;
+}
+
+a {
+  padding: 5px;
+  margin: 5px;
+  color: #1aad19;
+  border: 1px solid #1aad19;
 }

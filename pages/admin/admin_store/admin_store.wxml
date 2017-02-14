@@ -6,6 +6,7 @@
       <text>地址：{{item.StoreAddress}}</text>
       <text>电话：{{item.StoreTel}}</text>
       <text>{{item.Remark}}</text>
+      <image src="images/map.jpeg"></image>
     </view>
   </view>
 </view>

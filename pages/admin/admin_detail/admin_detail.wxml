@@ -1,0 +1,34 @@
+<view>
+  <button bindtap="bindAddItem" data-userid="{{user_id}}">添加消费记录</button>
+  <view wx:for="{{item_list}}">
+    <view class="item-list" data-id="{{item.ID}}" bindtap="bindEditStore">
+      <view>
+        <view style="width:25%;">
+          <text>消费项目：</text>
+        </view>
+        <view style="width:65%;">{{item.OpType}}</view>
+      </view>
+      <view>
+        <view style="width:25%;">
+          <text>消费数量：</text>
+        </view>
+        <view style="width:65%;">{{item.OpCount}}{{item.OpUnit}}</view>
+      </view>
+      
+      <view>
+        <view style="width:25%;">
+          <text>消费时间：</text>
+        </view>
+        <view style="width:65%;">{{item.OpTime}}</view>
+      </view>
+      <view>
+        <view style="width:25%;">
+          <text>备注：</text>
+        </view>
+        <view style="width:65%;">{{item.Remark}}</view>
+      </view>
+      <view class="end"></view>
+    </view>
+    
+  </view>
+</view>

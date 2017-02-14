@@ -2,5 +2,6 @@
     "pages": [
         "pages/detail/detail"
     ],
-    "navigationBarTitleText": "消费明细"
+    "navigationBarTitleText": "消费明细",
+    "enablePullDownRefresh": true
 }

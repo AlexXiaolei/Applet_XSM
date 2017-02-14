@@ -5,8 +5,18 @@ Page({
         user_list: []
     },
     bindUserManage: function (e) {
-         wx.navigateTo({
+        wx.navigateTo({
             url: 'detail/detail?user_id=' + e.currentTarget.dataset.userid
+        })
+    },
+    bindUserItem: function (e) {
+        wx.navigateTo({
+            url: 'consume/consume?user_id=' + e.currentTarget.dataset.userid
+        })
+    },
+    bindUserLog: function (e) {
+        wx.navigateTo({
+            url: '../admin_detail/admin_detail?user_id=' + e.currentTarget.dataset.userid
         })
     },
     onLoad: function () {
@@ -29,27 +39,27 @@ Page({
     },
 })
 
-function GetData(that){
+function GetData(that) {
     wx.request({
-            url: config.domain + '/api/XSM/GetUserList',
-            data: {
-            },
-            method: 'POST',
-            header: {
-                'content-type': 'application/x-www-form-urlencoded'
-            },
-            success: function (cbuserInfo) {
-                if (cbuserInfo.data.result == "1") {
-                    var userList = JSON.parse(cbuserInfo.data.data)
+        url: config.domain + '/api/XSM/GetUserList',
+        data: {
+        },
+        method: 'POST',
+        header: {
+            'content-type': 'application/x-www-form-urlencoded'
+        },
+        success: function (cbuserInfo) {
+            if (cbuserInfo.data.result == "1") {
+                var userList = JSON.parse(cbuserInfo.data.data)
 
-                    setTimeout(function () {
-                        wx.hideToast()
-                    }, 2000)
+                setTimeout(function () {
+                    wx.hideToast()
+                }, 2000)
 
-                    that.setData({
-                        user_list: userList
-                    })
-                }
+                that.setData({
+                    user_list: userList
+                })
             }
-        })
+        }
+    })
 }

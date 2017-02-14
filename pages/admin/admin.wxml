@@ -5,7 +5,7 @@
   </view>
   <view class="admin">
     <button bindtap="bindUserManage">客户资料管理</button>
-    <button>消费明细管理</button>
+    
     <button bindtap="bindStore">门店信息管理</button>
   </view>
 </view>

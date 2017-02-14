@@ -27,4 +27,7 @@
     <text>电话：{{item.StoreTel}}</text>
     <text>{{item.Remark}}</text>
   </view>
+  <view style="text-align:center;">
+    <image src="../../images/map.jpg"></image>
+  </view>
 </view>

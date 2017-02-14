@@ -5,7 +5,8 @@
         <text>客户:</text>
       </view>
       <view style="width:65%;">
-        <text>陈晓磊</text>
+        <text>{{userInfo.UserName==''?userInfo.NickName:userInfo.UserName}}</text>
+        <input name="UserID" value="{{userInfo.ID}}" style="display:none;"/>
       </view>
     </view>
     <view>

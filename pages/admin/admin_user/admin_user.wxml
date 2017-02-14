@@ -1,11 +1,17 @@
 <view>
-  <view wx:for="{{user_list}}">
-    <view class="user_info" data-userid="{{item.ID}}" bindtap="bindUserManage">
-        <image class="userinfo-identity" src="../../../images/icon/super_admin.png" wx:if="{{item.Role==2}}" ></image>
-        <image class="userinfo-identity" src="../../../images/icon/admin.png" wx:elif="{{item.Role==1}}" ></image>
-        <image class="userinfo-identity" src="../../../images/icon/user.png" wx:else ></image>
+  <view wx:for="{{user_list}}" style="height:84px;">
+    <view style="float:left;height:100%;">
+      <view class="user_info" data-userid="{{item.ID}}" bindtap="bindUserManage">
+        <image class="userinfo-identity" src="../../../images/icon/super_admin.png" wx:if="{{item.Role==2}}"></image>
+        <image class="userinfo-identity" src="../../../images/icon/admin.png" wx:elif="{{item.Role==1}}"></image>
+        <image class="userinfo-identity" src="../../../images/icon/user.png" wx:else></image>
         <image class="userinfo-avatar" src="{{item.AvatarUrl}}" background-size="cover"></image>
         <text>{{item.UserName==''?item.NickName:item.NickName+"("+item.UserName+")"}}</text>
+      </view>
+    </view>
+    <view style="display: flex;align-items: center;height:100%;float:right">
+      <a data-userid="{{item.ID}}" bindtap="bindUserItem">消费</a>
+      <a data-userid="{{item.ID}}" bindtap="bindUserLog">日志</a>
     </view>
   </view>
 </view>

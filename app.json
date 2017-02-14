@@ -1,13 +1,14 @@
 {
     "pages": [
-        "pages/admin/admin_user/consume/consume",
         "pages/index/index",
-        "pages/admin/admin_user/detail/detail",
+        "pages/detail/detail",
         "pages/admin/admin_user/admin_user",
+        "pages/admin/admin_detail/admin_detail",
+        "pages/admin/admin_user/consume/consume",
+        "pages/admin/admin_user/detail/detail",
         "pages/index/fill/fill",
         "pages/admin/admin",
         "pages/store/store",
-        "pages/detail/detail",
         "pages/admin/admin_store/admin_store",
         "pages/admin/admin_store/detail/detail"
     ],
@@ -23,19 +24,27 @@
         "list": [
             {
                 "pagePath": "pages/index/index",
-                "text": "会籍资料"
+                "text": "消费明细",
+                "iconPath": "images/icon/roundabout.png",
+                "selectedIconPath": "images/icon/roundabout.png"
             },
             {
                 "pagePath": "pages/detail/detail",
-                "text": "消费明细"
+                "text": "消费明细",
+                "iconPath": "images/icon/massage1.png",
+                "selectedIconPath": "images/icon/massage1.png"
             },
             {
                 "pagePath": "pages/store/store",
-                "text": "门店查询"
+                "text": "门店查询",
+                "iconPath": "images/icon/store6.png",
+                "selectedIconPath": "images/icon/store6.png"
             },
             {
                 "pagePath": "pages/admin/admin",
-                "text": "管理模式"
+                "text": "管理模式",
+                "iconPath": "images/icon/persian.png",
+                "selectedIconPath": "images/icon/persian.png"
             }
         ]
     }
