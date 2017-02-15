@@ -1,4 +1,4 @@
-<view style="width:90%;text-align:center;margin-left:auto;margin-right:auto;">
+<view style="width:90%;text-align:center;">
   <form class="store-info" bindsubmit="formSubmit">
     <input class="weui-input" name="store_name" type="text" placeholder="请输入门店名称" value="{{store_info.StoreName}}"/>
     <textarea class="weui-textarea" name="store_address" type="text" placeholder="请输入门店地址" value="{{store_info.StoreAddress}}"/>

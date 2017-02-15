@@ -5,6 +5,12 @@ Page({
         userInfo: {},
         hello: ''
     },
+    onShareAppMessage: function () {
+    return {
+      title: '馨善美客户服务系统',
+      path: '/page/index/index'
+    }
+  },
     bindFill: function (e) {
         wx.navigateTo({
             url: 'fill/fill?userid=' + e.currentTarget.dataset.userid
