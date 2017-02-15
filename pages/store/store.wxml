@@ -1,33 +1,8 @@
-<scroll-view scroll-y="true" style="height: 100%;" bindscrolltolower="loadMore" bindscrolltoupper="refesh">
-  <view wx:if="{{hasRefesh}}" style="display: flex;flex-direction: row;align-items: center;align-self: center;justify-content: center;">
-    <icon type="waiting" size="45" />
-    <text>刷新中...</text>
-  </view>
-  <view wx:else style="display:none">
-    <text></text>
-  </view>
-  <view class="lll" wx:for="{{list}}" wx:for-item="item" bindtap="bindViewTap" data-title="{{item.title}}">
-    <image style=" width: 50px;height: 50px;margin: 20rpx;" src="{{item.firstImg}}"></image>
-    <view class="eee">
-      <view style="margin:5px;font-size:8px"> 标题:{{item.title}}</view>
-      <view style="margin:5px;color:red;font-size:6px"> 来源:{{item.source}}</view>
-    </view>
-  </view>
-  <view class="tips1">
-    <view wx:if="{{hasMore}}" style="display: flex;flex-direction: row;align-items: center;align-self: center;justify-content: center;">
-      <icon type="waiting" size="45" />
-      <text>玩命的加载中...</text>
-    </view>
-  </view>
-</scroll-view>
 <view wx:for="{{store_list}}">
-  <view class="store_info" data-id="{{item.ID}}" bindtap="bindEditStore">
-    <text>店名：{{item.StoreName}}</text>
-    <text>地址：{{item.StoreAddress}}</text>
-    <text>电话：{{item.StoreTel}}</text>
-    <text>{{item.Remark}}</text>
-  </view>
-  <view style="text-align:center;">
-    <image src="../../images/map.jpg"></image>
+  <view class="weui-cells__title" style="background: #ffffff;" data-id="{{item.ID}}" bindtap="bindEditStore">
+    <view style="padding:10px;"><text>店名：{{item.StoreName}}</text></view>
+    <view style="padding:10px;"><text>地址：{{item.StoreAddress}}</text></view>
+    <view style="padding:10px;"><text>电话：{{item.StoreTel}}</text></view>
+    <view style="padding:10px;"><text>{{item.Remark}}</text></view>
   </view>
 </view>

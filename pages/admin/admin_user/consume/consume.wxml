@@ -6,7 +6,7 @@
       </view>
       <view style="width:65%;">
         <text>{{userInfo.UserName==''?userInfo.NickName:userInfo.UserName}}</text>
-        <input name="UserID" value="{{userInfo.ID}}" style="display:none;"/>
+        <input class="weui-input" name="UserID" value="{{userInfo.ID}}" style="display:none;"/>
       </view>
     </view>
     <view>
@@ -14,7 +14,7 @@
         <text>消费项目:</text>
       </view>
       <view style="width:65%;">
-        <input type="text" name="OpType" placeholder="消费项目" />
+        <input class="weui-input" type="text" name="OpType" placeholder="消费项目" />
       </view>
     </view>
     <view>
@@ -22,7 +22,7 @@
         <text>消费数量:</text>
       </view>
       <view style="width:65%;">
-        <input type="text" name="OpCount" placeholder="消费数量" />
+        <input class="weui-input" type="text" name="OpCount" placeholder="消费数量" />
       </view>
     </view>
     <view>
@@ -30,7 +30,7 @@
         <text>消费单位:</text>
       </view>
       <view style="width:65%;">
-        <input type="text" name="OpUnit" placeholder="消费单位" />
+        <input class="weui-input" type="text" name="OpUnit" placeholder="消费单位" />
       </view>
     </view>
     <view>
@@ -38,7 +38,7 @@
         <text>消费备注:</text>
       </view>
       <view style="width:65%;">
-        <textarea style="height:60px;" name="Remark" placeholder="消费备注" />
+        <textarea class="weui-textarea" style="height:60px;" name="Remark" placeholder="消费备注" />
       </view>
     </view>
   </view>
@@ -61,7 +61,7 @@
     </picker-view>
   </view>
   <input type="text" name="TimeValue" style="display:none;" value="{{time}}"/>
-  <view>
-    <button form-type="submit">保存</button>
+  <view style="margin-top:20px;">
+    <button class="weui-btn" type="primary" form-type="submit">保存</button>
   </view>
 </form>

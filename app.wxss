@@ -12,3 +12,21 @@
   box-sizing: border-box;
 }
 
+page {
+  background: #ebebeb;
+}
+
+.weui-input {
+  height: 2.08823529em;
+  min-height: 2.08823529em;
+  line-height: 2.08823529em;
+  background: #fff;
+}
+
+.weui-textarea {
+  height: 88px;
+  background: #fff;
+  display:block;
+width:90%;
+
+}

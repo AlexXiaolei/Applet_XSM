@@ -1,27 +1,25 @@
 <view>
   <view wx:for="{{item_list}}">
-    <view class="item-list" data-id="{{item.ID}}" bindtap="bindEditStore">
+    <view class="weui-cells__title" style="background: #ffffff;" data-id="{{item.ID}}">
       <view>
-        <view style="width:28%;">
+        <view style="width:28%;float:left;">
           <text>消费项目：</text>
         </view>
         <view style="width:60%;">{{item.OpType}}</view>
       </view>
       <view>
-        <view style="width:28%;">
+        <view style="width:28%;float:left;">
           <text>消费数量：</text>
         </view>
         <view style="width:60%;">{{item.OpCount}}{{item.OpUnit}}</view>
       </view>
       
       <view>
-        <view style="width:28%;">
+        <view style="width:28%;float:left;">
           <text>消费时间：</text>
         </view>
         <view style="width:60%;">{{item.OpTime}}</view>
       </view>
-      
-      <view class="end"></view>
     </view>
   </view>
 </view>

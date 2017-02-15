@@ -19,9 +19,7 @@ Page({
     },
     onPullDownRefresh: function () {
         var that = this
-        that.setData({
-            hasMore: true
-        })
+        
         GetData(that)
 
         wx.stopPullDownRefresh()

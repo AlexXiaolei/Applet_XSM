@@ -4,22 +4,18 @@ Page({
     data: {
         item_list: []
     },
-    bindAddItem: function (e) {
-        wx.navigateTo({
-            url: '../admin_user/consume/consume?user_id='+e.currentTarget.dataset.userid
-        })
-    },
-    bindEditStore: function (e) {
-        wx.navigateTo({
-            url: 'detail/detail?optype=2&store_id=' + e.currentTarget.dataset.id
-        })
-    },
     onLoad: function () {
         var that = this
 
         var userInfo = wx.getStorageSync("UserInfo")
 
         var userID = userInfo.ID
+
+        //本地存储UserID
+        wx.setStorage({
+            key: "Detail-UserId",
+            data: userID
+        })
 
         wx.showToast({
             title: '正在查询您的消费记录中，请稍后...',
@@ -39,6 +35,10 @@ Page({
 })
 
 function GetData(that, userID) {
+    if(!userID){
+        userID = wx.getStorageSync("Detail-UserId")
+    }
+
     wx.request({
         url: config.domain + '/api/XSM/GetUserItemLog',
         data: {
@@ -52,10 +52,9 @@ function GetData(that, userID) {
             if (itemInfo.data.result == "1") {
                 var itemList = JSON.parse(itemInfo.data.data)
 
-for(var i=0;i<itemList.length;i++)
-{
-    itemList[i].OpTime=itemList[i].OpTime.substring(0,10)
-}
+                for (var i = 0; i < itemList.length; i++) {
+                    itemList[i].OpTime = itemList[i].OpTime.substring(0, 10)
+                }
 
                 setTimeout(function () {
                     wx.hideToast()

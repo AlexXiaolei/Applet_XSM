@@ -2,7 +2,8 @@
 var app = getApp()
 Page({
     data: {
-        userInfo: {}
+        userInfo: {},
+        hello: ''
     },
     bindFill: function (e) {
         wx.navigateTo({
@@ -18,6 +19,24 @@ Page({
             that.setData({
                 userInfo: cbUserInfo
             })
+        })
+
+        var now = new Date()
+
+        var hour = now.getHours()
+
+        var helloValue = ""
+
+        if (hour < 9) { helloValue = "早上好。" }
+        else if (hour < 12) { helloValue = "上午好。" }
+        else if (hour < 14) { helloValue = "中午好。" }
+        else if (hour < 17) { helloValue = "下午好。" }
+        else if (hour < 19) { helloValue = "傍晚好。" }
+        else if (hour < 22) { helloValue = "晚上好。" }
+        else { helloValue = "夜深了，亲请注意休息。" }
+
+        that.setData({
+            hello: helloValue
         })
     }
 })

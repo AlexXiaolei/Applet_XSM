@@ -1,5 +1,5 @@
 <view>
-  <view wx:for="{{user_list}}" style="height:84px;">
+  <view class="weui-cells__title" wx:for="{{user_list}}" style="background: #ffffff;height:84px;">
     <view style="float:left;height:100%;">
       <view class="user_info" data-userid="{{item.ID}}" bindtap="bindUserManage">
         <image class="userinfo-identity" src="../../../images/icon/super_admin.png" wx:if="{{item.Role==2}}"></image>

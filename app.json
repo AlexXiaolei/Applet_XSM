@@ -13,7 +13,7 @@
         "pages/admin/admin_store/detail/detail"
     ],
     "window": {
-        "backgroundTextStyle": "light",
+        "backgroundTextStyle": "dark",
         "navigationBarBackgroundColor": "#fff",
         "navigationBarTitleText": "WeChat",
         "navigationBarTextStyle": "black",
@@ -24,7 +24,7 @@
         "list": [
             {
                 "pagePath": "pages/index/index",
-                "text": "消费明细",
+                "text": "会籍查询",
                 "iconPath": "images/icon/roundabout.png",
                 "selectedIconPath": "images/icon/roundabout.png"
             },

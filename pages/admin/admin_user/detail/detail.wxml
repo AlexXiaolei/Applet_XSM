@@ -9,11 +9,11 @@
     </view>
     <view>
       <text style="float:left;">真实姓名：</text>
-      <input type="text" name="UserName" placeholder="请输入客户真实姓名" value="{{user_info.UserName}}" />
+      <input class="weui-input" type="text" name="UserName" placeholder="请输入客户真实姓名" value="{{user_info.UserName}}" />
     </view>
     <view>
       <text style="float:left;">联系方式：</text>
-      <input type="text" name="UserTel" placeholder="请输入客户联系方式" value="{{user_info.UserTel}}" />
+      <input class="weui-input" type="text" name="UserTel" placeholder="请输入客户联系方式" value="{{user_info.UserTel}}" />
     </view>
     <view wx:if="{{user_info.Gender==1}}">
       <text>性别：男 </text>
@@ -40,7 +40,7 @@
       <text>最后活跃时间：{{user_info.AddTime}}</text>
     </view>
     <view>
-      <textarea type="text" name="Remark" style="border:1px solid #A9BAC9;" placeholder="请输入客户备注" value="{{user_info.Remark}}" />
+      <textarea class="weui-textarea" type="text" name="Remark" style="border:1px solid #A9BAC9;" placeholder="请输入客户备注" value="{{user_info.Remark}}" />
     </view>
     <view>
       <text style="float:left;">权限选择：</text>
@@ -50,7 +50,7 @@
         </view>
       </picker>
     </view>
-    <button form-type="submit">提交</button>
+    <button class="weui-btn" type="primary" form-type="submit">提交</button>
     <button class="btn-delete" wx:if="{{store_info.ID>0}}" bindtap="bindDelete" data-id="{{store_info.ID}}">删除</button>
   </form>
 </view>
