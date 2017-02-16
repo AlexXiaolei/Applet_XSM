@@ -5,24 +5,35 @@ Page({
     userInfo: {}
   },
   //事件处理函数
-  bindStore: function() {
+  bindStore: function () {
     wx.navigateTo({
       url: '../admin/admin_store/admin_store'
     })
   },
   //事件处理函数
-  bindUserManage: function() {
+  bindUserManage: function () {
     wx.navigateTo({
       url: '../admin/admin_user/admin_user'
     })
   },
   onLoad: function () {
-    var userInfo = wx.getStorageSync("UserInfo")
-
-    this.setData({
-        userInfo:userInfo
-      })
-    console.log('onLoad')
     var that = this
+
+    GetData(that)
+  },
+  onPullDownRefresh: function () {
+    var that = this
+
+    GetData(that)
+
+    wx.stopPullDownRefresh()
   }
 })
+
+function GetData(that) {
+  var userInfo = wx.getStorageSync("UserInfo")
+
+  that.setData({
+    userInfo: userInfo
+  })
+}

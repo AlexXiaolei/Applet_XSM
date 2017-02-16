@@ -50,7 +50,9 @@
         </view>
       </picker>
     </view>
+
+    <view style="margin:10px 10px 10px 10px;text-align:center;">
     <button class="weui-btn" type="primary" form-type="submit">提交</button>
-    <button class="btn-delete" wx:if="{{store_info.ID>0}}" bindtap="bindDelete" data-id="{{store_info.ID}}">删除</button>
+    </view>
   </form>
 </view>

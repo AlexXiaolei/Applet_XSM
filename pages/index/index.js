@@ -17,9 +17,22 @@ Page({
         })
     },
     onLoad: function () {
-        console.log('onLoad')
         var that = this
-        //调用应用实例的方法获取全局数据
+
+        GetData(that)
+    },
+    onPullDownRefresh: function () {
+        var that = this
+
+        GetData(that)
+
+        wx.stopPullDownRefresh()
+    }
+})
+
+function GetData(that) {
+
+    //调用应用实例的方法获取全局数据
         app.getUserInfo(function (cbUserInfo) {
             //更新数据
             that.setData({
@@ -44,5 +57,4 @@ Page({
         that.setData({
             hello: helloValue
         })
-    }
-})
+}

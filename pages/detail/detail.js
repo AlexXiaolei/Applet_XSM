@@ -18,7 +18,7 @@ Page({
         })
 
         wx.showToast({
-            title: '正在查询您的消费记录中，请稍后...',
+            title: '正在查询您的消费记录，请稍后...',
             icon: 'loading',
             duration: 10000
         })

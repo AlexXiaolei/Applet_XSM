@@ -82,6 +82,18 @@ Page({
     onLoad: function (options) {
         var that = this
 
+        var nowTime = []
+
+        var nowDate = new Date();
+        nowTime.push(nowDate.getFullYear()-2010)
+        nowTime.push(nowDate.getMonth())
+        nowTime.push(nowDate.getDate()-1)
+
+
+        that.setData({
+            time: nowTime
+        })
+
         wx.request({
             url: config.domain + '/api/XSM/GetUserInfo',
             data: {
