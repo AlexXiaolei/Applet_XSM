@@ -19,11 +19,18 @@ Page({
     },
     onPullDownRefresh: function () {
         var that = this
-        
+
         GetData(that)
 
         wx.stopPullDownRefresh()
-        
+
+    },
+    bindCall: function (e) {
+        var tel = e.currentTarget.dataset.tel
+
+        wx.makePhoneCall({
+            phoneNumber: tel //仅为示例，并非真实的电话号码
+        })
     }
 })
 

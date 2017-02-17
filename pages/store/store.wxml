@@ -2,7 +2,7 @@
   <view class="weui-cells__title" style="background: #ffffff;" data-id="{{item.ID}}" bindtap="bindEditStore">
     <view style="padding:10px;"><text>店名：{{item.StoreName}}</text></view>
     <view style="padding:10px;"><text>地址：{{item.StoreAddress}}</text></view>
-    <view style="padding:10px;"><text>电话：{{item.StoreTel}}</text></view>
+    <view style="padding:10px;" >联系方式：<a style="color:#3080c0" bindtap="bindCall" data-tel="{{item.StoreTel}}">{{item.StoreTel}}(点击可直接拨打)</a></view>
     <view style="padding:10px;"><text>{{item.Remark}}</text></view>
   </view>
 </view>
